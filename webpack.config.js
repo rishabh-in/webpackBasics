@@ -7,6 +7,10 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
+  devServer: {
+    static: path.join(__dirname, "dist"),
+    port: 9000
+  },
   module: {
     rules: [
       {
@@ -15,6 +19,13 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      }, 
+      {
+        test: /\.css$/,
+        use: [
+          {loader: "style-loader"},
+          {loader: "css-loader"}
+        ]
       }
     ]
   }
