@@ -1,6 +1,19 @@
 import React from 'react';
-import {render} from 'react-dom';
-import '../style/style.css';
-const About = () => <h1>About Webpack....!!!!</h1>
+import { BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
+import App from './app';
+import Contact from './contact';
+const About = () => {
+  return(
+    <div>
+    <h1>About Page....!!</h1>
+    <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav>
+    </div>
+  )
+}
 
-render(<About/>, document.getElementById("root"))
+export default About;
