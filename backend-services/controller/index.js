@@ -6,11 +6,8 @@ const getScript = async (req, res) => {
   // let {id} = req.body;
   console.log("#####################");
   const js = require('fs').readFileSync(path, { encoding: "utf8" })
-  res.send({
-    message:"success",
-    success: true,
-    data: js
-  })
+  // console.log(js)
+  res.send(js)
 }
 
 module.exports = {getScript}

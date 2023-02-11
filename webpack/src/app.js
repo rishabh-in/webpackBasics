@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
 import Contact from './contact';
 import About from './about';
-
+import './methods'
 const App = () => {
   return(
     <div>
